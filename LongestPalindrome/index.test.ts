@@ -3,12 +3,12 @@ import { longestPalindrome } from ".";
 
 describe("longestPalindrome関数のテスト", () => {
   test("babad は aba を返すべき", () => {
-    expect(longestPalindrome("babad")).toEqual("aba");
+    expect(longestPalindrome("babad")).toBe("aba");
   });
   test("cbbd は bb を返すべき", () => {
-    expect(longestPalindrome("cbbd")).toEqual("bb");
+    expect(longestPalindrome("cbbd")).toBe("bb");
   });
   test("s は s を返すべき", () => {
-    expect(longestPalindrome("s")).toEqual("s");
+    expect(longestPalindrome("s")).toBe("s");
   });
 });
