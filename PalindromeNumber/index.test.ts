@@ -14,4 +14,7 @@ describe("isPalindrome関数のテスト", () => {
   test("1001 は true を返すべき", () => {
     expect(isPalindrome(1001)).toEqual(true);
   });
+  test("1011 は false を返すべき", () => {
+    expect(isPalindrome(1011)).toEqual(false);
+  });
 });
