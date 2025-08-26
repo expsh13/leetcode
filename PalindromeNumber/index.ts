@@ -13,8 +13,6 @@ export function isPalindrome(x: number): boolean {
     if (i === str.length - (i + 1)) return true;
 
     if (str[i] !== str[str.length - (i + 1)]) return false;
-
-    console.log("koko");
   }
   return true;
 }

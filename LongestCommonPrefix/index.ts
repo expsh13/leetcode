@@ -9,21 +9,25 @@
 // strs[i]空でない場合は小文字の英語のみで構成されます。
 
 export function longestCommonPrefix(strs: string[]): string {
-  const firstStrs = strs[0];
-  if (strs.length === 1) return firstStrs;
+  if (strs.length === 0) return "";
+  const firstStr = strs[0];
+  if (strs.length === 1) return firstStr;
 
-  const startSlice = 0;
+  let result = "";
 
-  // 1文字目
-  for (let i = 0; i < firstStrs.length; i++) {
-    const firstStr = firstStrs[i];
-    // 最初以外の文字列
+  // 各配列から1文字ずつ取り出す。
+  for (let i = 0; i < firstStr.length; i++) {
+    const s = firstStr[i];
     for (let j = 1; j < strs.length; j++) {
-      const str = strs[j][i];
-      if (firstStr !== str) {
-        return firstStrs.substring(startSlice, i);
+      if (i > strs[j].length) return result;
+
+      const target = strs[j][i];
+      if (s !== target) {
+        return result;
       }
     }
+    result += s;
   }
-  return firstStrs;
+
+  return "";
 }
